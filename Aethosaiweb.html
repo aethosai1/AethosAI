@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Transforma tu negocio digital con soluciones innovadoras en diseño y desarrollo web">
+  <title>Digital Solutions - Transformación Digital Profesional</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #1e3c72;
+      --secondary-color: #2a5298;
+      --cta-color: #ff9800;
+      --success-color: #28a745;
+      --whatsapp-color: #25D366;
+      --text-dark: #2d3436;
+      --text-light: #f9f9f9;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Hero Section Mejorada */
+    .hero {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: var(--text-light);
+      padding: 100px 20px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -50px;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: white;
+      transform: skewY(-3deg);
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1.5rem;
+      animation: slideIn 1s ease-out;
+    }
+
+    .hero p {
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    /* Botones Mejorados */
+    .cta-button {
+      background: var(--cta-color);
+      color: var(--text-light);
+      padding: 18px 35px;
+      text-decoration: none;
+      border-radius: 50px;
+      display: inline-block;
+      margin-top: 20px;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(255, 152, 0, 0.4);
+    }
+
+    /* Benefits Section Actualizada */
+    .benefits {
+      padding: 80px 20px;
+      background: #f8f9fa;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+
+    .benefit {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      transition: all 0.3s ease;
+      text-align: left;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    }
+
+    .benefit:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .benefit-icon {
+      font-size: 2.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+    }
+
+    /* Testimonials Mejorado */
+    .testimonials {
+      padding: 80px 20px;
+      background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+      color: white;
+    }
+
+    .testimonial-card {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      margin: 30px auto;
+      max-width: 800px;
+      backdrop-filter: blur(10px);
+    }
+
+    /* Contact Form Moderno */
+    .contact {
+      padding: 80px 20px;
+      background: white;
+    }
+
+    .contact-form {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 15px;
+      border: 2px solid #e0e0e0;
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input:focus {
+      border-color: var(--primary-color);
+      outline: none;
+      box-shadow: 0 0 8px rgba(30, 60, 114, 0.2);
+    }
+
+    /* WhatsApp Button Flotante */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: var(--whatsapp-color);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: translateY(-3px);
+      background: #20b358;
+    }
+
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+      
+      .hero p {
+        font-size: 1.2rem;
+      }
+      
+      .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 20px;
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Transforma tu Negocio Digital</h1>
+      <p>Soluciones innovadoras para impulsar tu presencia online</p>
+      <a href="#contact" class="cta-button">¡Comienza Ahora!</a>
+    </div>
+  </section>
+
+  <!-- Benefits Section -->
+  <section class="benefits">
+    <div class="container">
+      <h2 class="section-title">Nuestras Ventajas</h2>
+      <div class="benefits-grid">
+        <div class="benefit">
+          <div class="benefit-icon">🎯</div>
+          <h3>Diseño Personalizado</h3>
+          <p>Experiencias únicas que reflejan la esencia de tu marca</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🚀</div>
+          <h3>Optimización SEO</h3>
+          <p>Posicionamiento líder en motores de búsqueda</p>
+        </div>
+        <div class="benefit">
+          <div class="benefit-icon">🛡️</div>
+          <h3>Soporte 24/7</h3>
+          <p>Asistencia técnica profesional cuando la necesites</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials">
+    <div class="container">
+      <h2 class="section-title">Testimonios</h2>
+      <div class="testimonial-card">
+        <p>"Increíble transformación en nuestro negocio. Resultados visibles desde la primera semana."</p>
+        <h4>- Laura Martínez, CEO TechSolutions</h4>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contáctanos</h2>
+      <form class="contact-form">
+        <div class="form-group">
+          <input type="text" placeholder="Nombre completo" required>
+        </div>
+        <div class="form-group">
+          <input type="email" placeholder="Correo electrónico" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" placeholder="Teléfono">
+        </div>
+        <button type="submit" class="cta-button">Enviar Mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- WhatsApp Float -->
+  <a href="https://wa.me/1234567890" class="whatsapp-float">
+    <span>💬 WhatsApp</span>
+  </a>
+</body>
+</html>
